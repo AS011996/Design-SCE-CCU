@@ -1,12 +1,12 @@
 ** new matrix, for max recycled content in bags
 
 sets
-	i substances /E1*E140/
-	j activities /P1*P161/
+	i substances /E1*E141/
+	j activities /P1*P162/
 	k impacts /I1*I2913/
     l MPindicators /MPI1*MPI10/
 	losses(i) /E97/
-	intermediates(i) /E1*E77,E78*E82,E84*E89,E91*E96,E107,E113,E115,E117*E122,E124*E128,E133*E140/
+	intermediates(i) /E1*E77,E78*E82,E84*E89,E91*E96,E107,E113,E115,E117*E122,E124*E128,E133*E141/
 	homes(j) homesubsets /P87/
 	supplies(i) bagsperhome /E84*E88,E127/
 	sortedStuff(i) sortedbagsweights /E92*E96,E128/
@@ -77,6 +77,10 @@ $if not set s151wind $set s151wind 0
 $if not set s152solar $set s152solar 0
 $if not set s153bioet $set s153bioet 0
 $if not set s158ccu $set s158ccu 0
+$if not set s159 $set s159 0
+$if not set s160 $set s160 0
+$if not set s161 $set s161 0
+$if not set s162 $set s162 0
 $if not set litter $set litter 1000
 
 s.up('P88')=%litter%;
@@ -91,6 +95,10 @@ s.up('P150')=%s150alcpla%;
 *s.up('P152')=%s152solar%;
 s.up('P153')=%s153bioet%;
 *s.up('P158')=%s158ccu%;
+s.up('P159')=%s159%;
+s.up('P160')=%s160%;
+*s.up('P161')=%s161%;
+*s.up('P162')=%s162%;
 
 s.up('P148')=0;
 
